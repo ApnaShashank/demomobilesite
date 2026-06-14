@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber - E-Commerce</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+        }
+        /* Mobile container to mimic the screenshot's aspect ratio */
+        .mobile-container {
+            width: 100%;
+            max-width: 428px; /* Standard large mobile width */
+            background-color: white;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        /* Hide scrollbar for category scroll */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="antialiased text-gray-900">
+
+    <div class="mobile-container">
+
+        <!-- Header -->
+        <header class="flex justify-between items-center px-6 py-4 bg-white sticky top-0 z-50 border-b border-gray-100">
+            <div class="font-bold text-2xl tracking-tighter">cyber</div>
+            <button class="text-black">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </header>
+
+        <!-- Main Hero: iPhone 14 Pro -->
+        <section class="bg-[#211C24] text-white text-center pt-16 pb-0 px-6 flex flex-col items-center relative overflow-hidden">
+            <p class="text-gray-400 text-sm font-medium mb-1 tracking-wider">Pro.Beyond.</p>
+            <h1 class="text-6xl font-light mb-4 tracking-tight leading-tight">
+                IPhone 14<br>
+                <span class="font-semibold">Pro</span>
+            </h1>
+            <p class="text-gray-400 text-sm mb-8 px-4 leading-relaxed">
+                Created to change everything for the better. For everyone
+            </p>
+            <button class="border border-white/50 px-10 py-3 rounded text-sm font-medium hover:bg-white hover:text-black transition duration-300 mb-12">
+                Shop Now
+            </button>
+            <div class="relative w-full h-[300px] flex justify-center items-end mt-4">
+                <!-- Using a realistic placeholder for the iPhones -->
+                <img src="https://images.unsplash.com/photo-1678685888221-cda773a3dcdb?q=80&w=800&auto=format&fit=crop" alt="iPhone 14 Pro" class="absolute bottom-0 w-[90%] object-cover object-top h-[110%] mask-image-bottom" style="-webkit-mask-image: linear-gradient(to top, transparent 5%, black 40%); mask-image: linear-gradient(to top, transparent 5%, black 40%);">
+            </div>
+        </section>
+
+        <!-- Sub Hero: AirPods Max -->
+        <section class="bg-[#F5F5F7] text-center py-16 px-6 flex flex-col items-center">
+            <img src="https://images.unsplash.com/photo-1613040809024-b4ef7ba99bc3?q=80&w=500&auto=format&fit=crop" alt="AirPods Max" class="w-48 h-48 object-contain mix-blend-multiply mb-6">
+            <h2 class="text-4xl font-light mb-3">Apple <span class="font-semibold">AirPods Max</span></h2>
+            <p class="text-gray-500 text-sm max-w-[250px] leading-relaxed">Computational audio. Listen, it's powerful</p>
+        </section>
+
+        <!-- Sub Hero: Vision Pro -->
+        <section class="bg-[#353535] text-white text-center py-16 px-6 flex flex-col items-center">
+            <img src="https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?q=80&w=500&auto=format&fit=crop" alt="Apple Vision Pro" class="w-64 h-32 object-cover rounded-xl mb-8">
+            <h2 class="text-4xl font-light mb-3">Apple <span class="font-semibold">Vision Pro</span></h2>
+            <p class="text-gray-400 text-sm max-w-[280px] leading-relaxed">An immersive way to experience entertainment</p>
+        </section>
+
+        <!-- Sub Hero: Playstation 5 -->
+        <section class="bg-[#F5F5F7] text-center py-16 px-6 flex flex-col items-center">
+            <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?q=80&w=500&auto=format&fit=crop" alt="Playstation 5" class="w-48 h-48 object-contain mix-blend-multiply mb-6">
+            <h2 class="text-4xl font-light mb-4">Playstation <span class="font-semibold">5</span></h2>
+            <p class="text-gray-500 text-sm max-w-[300px] leading-relaxed">Incredibly powerful CPUs, GPUs, and an SSD with Integrated I/O will redefine your PlayStation experience.</p>
+        </section>
+
+        <!-- Sub Hero: Macbook Air -->
+        <section class="bg-[#EAEAEA] text-center py-16 px-6 flex flex-col items-center">
+            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=500&auto=format&fit=crop" alt="Macbook Air" class="w-64 h-40 object-contain mix-blend-multiply mb-6">
+            <h2 class="text-4xl font-light mb-4">Macbook <span class="font-semibold">Air</span></h2>
+            <p class="text-gray-500 text-sm max-w-[320px] leading-relaxed mb-8">The new 15-inch MacBook Air makes room for more of what you love with a spacious Liquid Retina display.</p>
+            <button class="border border-black px-10 py-3 rounded text-sm font-medium hover:bg-black hover:text-white transition duration-300">
+                Shop Now
+            </button>
+        </section>
+
+        <!-- Browse By Category -->
+        <section class="py-12 px-4 bg-[#FAFAFA]">
+            <div class="flex justify-between items-center mb-8 px-2">
+                <h3 class="text-xl font-semibold">Browse By Category</h3>
+                <div class="flex gap-4">
+                    <button class="text-gray-300 hover:text-black transition"><i data-lucide="chevron-left" class="w-6 h-6"></i></button>
+                    <button class="text-black hover:text-gray-500 transition"><i data-lucide="chevron-right" class="w-6 h-6"></i></button>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-[#EDEDED] rounded-2xl py-8 flex flex-col items-center justify-center cursor-pointer hover:bg-gray-200 transition">
+                    <i data-lucide="smartphone" class="w-8 h-8 mb-3 text-black"></i>
+                    <span class="text-sm font-medium">Phones</span>
+                </div>
+                <div class="bg-[#EDEDED] rounded-2xl py-8 flex flex-col items-center justify-center cursor-pointer hover:bg-gray-200 transition">
+                    <i data-lucide="watch" class="w-8 h-8 mb-3 text-black"></i>
+                    <span class="text-sm font-medium">Smart Watches</span>
+                </div>
+                <div class="bg-[#EDEDED] rounded-2xl py-8 flex flex-col items-center justify-center cursor-pointer hover:bg-gray-200 transition">
+                    <i data-lucide="camera" class="w-8 h-8 mb-3 text-black"></i>
+                    <span class="text-sm font-medium">Cameras</span>
+                </div>
+                <div class="bg-[#EDEDED] rounded-2xl py-8 flex flex-col items-center justify-center cursor-pointer hover:bg-gray-200 transition">
+                    <i data-lucide="headphones" class="w-8 h-8 mb-3 text-black"></i>
+                    <span class="text-sm font-medium">Headphones</span>
+                </div>
+                <div class="bg-[#EDEDED] rounded-2xl py-8 flex flex-col items-center justify-center cursor-pointer hover:bg-gray-200 transition">
+                    <i data-lucide="monitor" class="w-8 h-8 mb-3 text-black"></i>
+                    <span class="text-sm font-medium">Computers</span>
+                </div>
+                <div class="bg-[#EDEDED] rounded-2xl py-8 flex flex-col items-center justify-center cursor-pointer hover:bg-gray-200 transition">
+                    <i data-lucide="gamepad-2" class="w-8 h-8 mb-3 text-black"></i>
+                    <span class="text-sm font-medium">Gaming</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product List Section -->
+        <section class="py-12 px-4 bg-white">
+            <!-- Tabs -->
+            <div class="flex gap-6 mb-8 text-sm font-medium text-gray-400 overflow-x-auto hide-scrollbar whitespace-nowrap px-2">
+                <span class="text-black border-b-2 border-black pb-2">New Arrival</span>
+                <span class="pb-2">Bestseller</span>
+                <span class="pb-2">Featured Products</span>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="grid grid-cols-2 gap-4">
+                <!-- Product 1 -->
+                <div class="bg-[#F6F6F6] p-4 rounded-xl relative flex flex-col items-center text-center group">
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-red-500 transition">
+                        <i data-lucide="heart" class="w-5 h-5"></i>
+                    </button>
+                    <div class="h-32 flex items-center justify-center mt-4 mb-4">
+                        <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?q=80&w=300&auto=format&fit=crop" alt="iPhone" class="max-h-full mix-blend-multiply object-contain">
+                    </div>
+                    <h3 class="text-xs font-medium mb-3 leading-snug px-1 line-clamp-2 min-h-[32px]">Apple iPhone 14 Pro Max 128GB...</h3>
+                    <p class="text-lg font-bold mb-4">$900</p>
+                    <button class="w-full bg-black text-white py-2.5 rounded-lg text-sm font-medium mt-auto hover:bg-gray-800 transition">Buy Now</button>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-[#F6F6F6] p-4 rounded-xl relative flex flex-col items-center text-center group">
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-red-500 transition">
+                        <i data-lucide="heart" class="w-5 h-5"></i>
+                    </button>
+                    <div class="h-32 flex items-center justify-center mt-4 mb-4">
+                        <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=300&auto=format&fit=crop" alt="Camera" class="max-h-full mix-blend-multiply object-contain">
+                    </div>
+                    <h3 class="text-xs font-medium mb-3 leading-snug px-1 line-clamp-2 min-h-[32px]">Blackmagic Pocket Cinema Camera</h3>
+                    <p class="text-lg font-bold mb-4">$2535</p>
+                    <button class="w-full bg-black text-white py-2.5 rounded-lg text-sm font-medium mt-auto hover:bg-gray-800 transition">Buy Now</button>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-[#F6F6F6] p-4 rounded-xl relative flex flex-col items-center text-center group">
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-red-500 transition">
+                        <i data-lucide="heart" class="w-5 h-5"></i>
+                    </button>
+                    <div class="h-32 flex items-center justify-center mt-4 mb-4">
+                        <img src="https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?q=80&w=300&auto=format&fit=crop" alt="Apple Watch" class="max-h-full mix-blend-multiply object-contain">
+                    </div>
+                    <h3 class="text-xs font-medium mb-3 leading-snug px-1 line-clamp-2 min-h-[32px]">Apple Watch Series 9 GPS 41m...</h3>
+                    <p class="text-lg font-bold mb-4">$399</p>
+                    <button class="w-full bg-black text-white py-2.5 rounded-lg text-sm font-medium mt-auto hover:bg-gray-800 transition">Buy Now</button>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="bg-[#F6F6F6] p-4 rounded-xl relative flex flex-col items-center text-center group">
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-red-500 transition">
+                        <i data-lucide="heart" class="w-5 h-5"></i>
+                    </button>
+                    <div class="h-32 flex items-center justify-center mt-4 mb-4">
+                        <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?q=80&w=300&auto=format&fit=crop" alt="AirPods" class="max-h-full mix-blend-multiply object-contain">
+                    </div>
+                    <h3 class="text-xs font-medium mb-3 leading-snug px-1 line-clamp-2 min-h-[32px]">AirPods Max Silver</h3>
+                    <p class="text-lg font-bold mb-4">$549</p>
+                    <button class="w-full bg-black text-white py-2.5 rounded-lg text-sm font-medium mt-auto hover:bg-gray-800 transition">Buy Now</button>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="bg-[#F6F6F6] p-4 rounded-xl relative flex flex-col items-center text-center group">
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-red-500 transition">
+                        <i data-lucide="heart" class="w-5 h-5"></i>
+                    </button>
+                    <div class="h-32 flex items-center justify-center mt-4 mb-4">
+                        <img src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?q=80&w=300&auto=format&fit=crop" alt="Galaxy Watch" class="max-h-full mix-blend-multiply object-contain">
+                    </div>
+                    <h3 class="text-xs font-medium mb-3 leading-snug px-1 line-clamp-2 min-h-[32px]">Samsung Galaxy Watch6 Classic...</h3>
+                    <p class="text-lg font-bold mb-4">$369</p>
+                    <button class="w-full bg-black text-white py-2.5 rounded-lg text-sm font-medium mt-auto hover:bg-gray-800 transition">Buy Now</button>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="bg-[#F6F6F6] p-4 rounded-xl relative flex flex-col items-center text-center group">
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-red-500 transition">
+                        <i data-lucide="heart" class="w-5 h-5"></i>
+                    </button>
+                    <div class="h-32 flex items-center justify-center mt-4 mb-4">
+                        <img src="https://images.unsplash.com/photo-1585060544812-6b45742d762f?q=80&w=300&auto=format&fit=crop" alt="Galaxy Z Fold" class="max-h-full mix-blend-multiply object-contain">
+                    </div>
+                    <h3 class="text-xs font-medium mb-3 leading-snug px-1 line-clamp-2 min-h-[32px]">Galaxy Z Fold5 Unlocked | 256...</h3>
+                    <p class="text-lg font-bold mb-4">$1799</p>
+                    <button class="w-full bg-black text-white py-2.5 rounded-lg text-sm font-medium mt-auto hover:bg-gray-800 transition">Buy Now</button>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="bg-[#F6F6F6] p-4 rounded-xl relative flex flex-col items-center text-center group">
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-red-500 transition">
+                        <i data-lucide="heart" class="w-5 h-5"></i>
+                    </button>
+                    <div class="h-32 flex items-center justify-center mt-4 mb-4">
+                        <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?q=80&w=300&auto=format&fit=crop" alt="Galaxy Buds" class="max-h-full mix-blend-multiply object-contain">
+                    </div>
+                    <h3 class="text-xs font-medium mb-3 leading-snug px-1 line-clamp-2 min-h-[32px]">Galaxy Buds FE Graphite</h3>
+                    <p class="text-lg font-bold mb-4">$99.99</p>
+                    <button class="w-full bg-black text-white py-2.5 rounded-lg text-sm font-medium mt-auto hover:bg-gray-800 transition">Buy Now</button>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="bg-[#F6F6F6] p-4 rounded-xl relative flex flex-col items-center text-center group">
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-red-500 transition">
+                        <i data-lucide="heart" class="w-5 h-5"></i>
+                    </button>
+                    <div class="h-32 flex items-center justify-center mt-4 mb-4">
+                        <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=300&auto=format&fit=crop" alt="iPad" class="max-h-full mix-blend-multiply object-contain">
+                    </div>
+                    <h3 class="text-xs font-medium mb-3 leading-snug px-1 line-clamp-2 min-h-[32px]">Apple iPad 9 10.2" 64GB Wi-Fi...</h3>
+                    <p class="text-lg font-bold mb-4">$398</p>
+                    <button class="w-full bg-black text-white py-2.5 rounded-lg text-sm font-medium mt-auto hover:bg-gray-800 transition">Buy Now</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- iPad Pro Hero -->
+        <section class="bg-white text-center py-12 px-6 flex flex-col items-center">
+            <img src="https://images.unsplash.com/photo-1589739900266-43b2843f4c12?q=80&w=500&auto=format&fit=crop" alt="iPad Pro" class="w-full max-w-[300px] h-auto object-contain mb-8">
+            <h2 class="text-4xl font-light mb-4">iPad <span class="font-semibold">Pro</span></h2>
+            <p class="text-gray-500 text-sm max-w-[320px] leading-relaxed mb-6">iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.</p>
+            <button class="border border-black px-10 py-3 rounded text-sm font-medium hover:bg-black hover:text-white transition duration-300">
+                Shop Now
+            </button>
+            <!-- Dots -->
+            <div class="flex gap-2 mt-8">
+                <div class="w-2 h-2 rounded-full bg-black"></div>
+                <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+                <div class="w-2 h-2 rounded-full bg-gray-300"></div>
+            </div>
+        </section>
+
+        <!-- Discounts Section -->
+        <section class="py-12 px-4 bg-white">
+            <h3 class="text-xl font-bold mb-8 px-2">Discounts up to -50%</h3>
+            
+            <div class="grid grid-cols-2 gap-4">
+                <!-- Discount Product 1 -->
+                <div class="bg-[#F6F6F6] p-4 rounded-xl relative flex flex-col items-center text-center group">
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-red-500 transition">
+                        <i data-lucide="heart" class="w-5 h-5"></i>
+                    </button>
+                    <div class="h-32 flex items-center justify-center mt-4 mb-4">
+                        <img src="https://images.unsplash.com/photo-1678652197831-2d180705cd2c?q=80&w=300&auto=format&fit=crop" alt="iPhone Gold" class="max-h-full mix-blend-multiply object-contain">
+                    </div>
+                    <h3 class="text-xs font-medium mb-3 leading-snug px-1 line-clamp-2 min-h-[32px]">Apple iPhone 14 Pro 1TB Gold...</h3>
+                    <p class="text-lg font-bold mb-4">$900</p>
+                    <button class="w-full bg-black text-white py-2.5 rounded-lg text-sm font-medium mt-auto hover:bg-gray-800 transition">Buy Now</button>
+                </div>
+
+                <!-- Discount Product 2 -->
+                <div class="bg-[#F6F6F6] p-4 rounded-xl relative flex flex-col items-center text-center group">
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-red-500 transition">
+                        <i data-lucide="heart" class="w-5 h-5"></i>
+                    </button>
+                    <div class="h-32 flex items-center justify-center mt-4 mb-4">
+                        <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?q=80&w=300&auto=format&fit=crop" alt="AirPods" class="max-h-full mix-blend-multiply object-contain">
+                    </div>
+                    <h3 class="text-xs font-medium mb-3 leading-snug px-1 line-clamp-2 min-h-[32px]">AirPods Max Silver</h3>
+                    <p class="text-lg font-bold mb-4">$549</p>
+                    <button class="w-full bg-black text-white py-2.5 rounded-lg text-sm font-medium mt-auto hover:bg-gray-800 transition">Buy Now</button>
+                </div>
+
+                <!-- Discount Product 3 -->
+                <div class="bg-[#F6F6F6] p-4 rounded-xl relative flex flex-col items-center text-center group">
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-red-500 transition">
+                        <i data-lucide="heart" class="w-5 h-5"></i>
+                    </button>
+                    <div class="h-32 flex items-center justify-center mt-4 mb-4">
+                        <img src="https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?q=80&w=300&auto=format&fit=crop" alt="Apple Watch" class="max-h-full mix-blend-multiply object-contain">
+                    </div>
+                    <h3 class="text-xs font-medium mb-3 leading-snug px-1 line-clamp-2 min-h-[32px]">Apple Watch Series 9 GPS 41m...</h3>
+                    <p class="text-lg font-bold mb-4">$399</p>
+                    <button class="w-full bg-black text-white py-2.5 rounded-lg text-sm font-medium mt-auto hover:bg-gray-800 transition">Buy Now</button>
+                </div>
+
+                <!-- Discount Product 4 -->
+                <div class="bg-[#F6F6F6] p-4 rounded-xl relative flex flex-col items-center text-center group">
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-red-500 transition">
+                        <i data-lucide="heart" class="w-5 h-5"></i>
+                    </button>
+                    <div class="h-32 flex items-center justify-center mt-4 mb-4">
+                        <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?q=80&w=300&auto=format&fit=crop" alt="iPhone" class="max-h-full mix-blend-multiply object-contain">
+                    </div>
+                    <h3 class="text-xs font-medium mb-3 leading-snug px-1 line-clamp-2 min-h-[32px]">Apple iPhone 14 Pro 1TB Black...</h3>
+                    <p class="text-lg font-bold mb-4">$900</p>
+                    <button class="w-full bg-black text-white py-2.5 rounded-lg text-sm font-medium mt-auto hover:bg-gray-800 transition">Buy Now</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Big Summer Sale Banner -->
+        <section class="bg-[#1A1A1A] text-white text-center py-20 px-6 relative overflow-hidden">
+            <!-- Decorative blurred backgrounds for aesthetic similar to image -->
+            <div class="absolute top-0 left-0 w-32 h-32 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 transform -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 right-0 w-40 h-40 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 transform translate-x-1/4 translate-y-1/4"></div>
+            
+            <div class="relative z-10 flex flex-col items-center">
+                <h2 class="text-5xl font-light mb-4">Big Summer<br><span class="font-semibold">Sale</span></h2>
+                <p class="text-gray-400 text-sm mb-8 px-4 leading-relaxed max-w-[280px]">
+                    Commodo fames vitae vitae leo mauris in. Eu consequat.
+                </p>
+                <button class="border border-white/50 px-10 py-3 rounded text-sm font-medium hover:bg-white hover:text-black transition duration-300">
+                    Shop Now
+                </button>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-[#0D0D0D] text-white pt-16 pb-12 px-8 text-center flex flex-col items-center">
+            <div class="mb-10 w-full flex flex-col items-center">
+                <div class="font-bold text-2xl tracking-tighter mb-4 text-white">cyber</div>
+                <p class="text-gray-400 text-xs leading-relaxed max-w-[280px]">
+                    We are a residential interior design firm located in Portland. Our boutique-studio offers more than...
+                </p>
+            </div>
+            
+            <div class="w-full mb-8">
+                <h4 class="font-semibold text-sm mb-4">Services</h4>
+                <ul class="text-gray-400 text-xs space-y-3 font-light">
+                    <li><a href="#" class="hover:text-white transition">Bonus program</a></li>
+                    <li><a href="#" class="hover:text-white transition">Gift cards</a></li>
+                    <li><a href="#" class="hover:text-white transition">Credit and payment</a></li>
+                    <li><a href="#" class="hover:text-white transition">Service contracts</a></li>
+                    <li><a href="#" class="hover:text-white transition">Non-cash account</a></li>
+                    <li><a href="#" class="hover:text-white transition">Payment</a></li>
+                </ul>
+            </div>
+            
+            <div class="w-full mb-12">
+                <h4 class="font-semibold text-sm mb-4">Assistance to the buyer</h4>
+                <ul class="text-gray-400 text-xs space-y-3 font-light">
+                    <li><a href="#" class="hover:text-white transition">Find an order</a></li>
+                    <li><a href="#" class="hover:text-white transition">Terms of delivery</a></li>
+                    <li><a href="#" class="hover:text-white transition">Exchange and return of goods</a></li>
+                    <li><a href="#" class="hover:text-white transition">Guarantee</a></li>
+                    <li><a href="#" class="hover:text-white transition">Frequently asked questions</a></li>
+                    <li><a href="#" class="hover:text-white transition">Terms of use of the site</a></li>
+                </ul>
+            </div>
+            
+            <div class="flex justify-center gap-6 mt-4">
+                <a href="#" class="text-white hover:text-gray-400 transition"><i data-lucide="twitter" class="w-5 h-5 fill-current"></i></a>
+                <a href="#" class="text-white hover:text-gray-400 transition"><i data-lucide="facebook" class="w-5 h-5 fill-current"></i></a>
+                <a href="#" class="text-white hover:text-gray-400 transition"><svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+                <a href="#" class="text-white hover:text-gray-400 transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
